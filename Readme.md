@@ -426,6 +426,18 @@ Synchronizes the **model** and **view** using `[()]` syntax.
 - A **closure** is a function that retains access to its outer scope even after the outer function has finished execution.
 - Useful for **data encapsulation** and **creating private variables**.
 
+```js
+function myFunction() {
+  let a = 4;
+  return function () {
+    return a * a;
+  };
+}
+
+const closureFunc = myFunction(); // myFunction executes, but a remains accessible
+console.log(closureFunc());
+```
+
 ---
 
 ### **4. What are Immediately Invoked Function Expressions (IIFE)?**
