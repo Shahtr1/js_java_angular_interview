@@ -505,3 +505,101 @@ class Solution {
     }
 }
 ```
+
+# Spring Boot Interview Questions and Answers
+
+## 1. What is Spring Boot?
+
+Spring Boot is an extension of the Spring Framework that simplifies the development of Java applications by providing convention over configuration, auto-configuration, and embedded servers.
+
+## 2. What are the advantages of using Spring Boot?
+
+- Auto-configuration reduces boilerplate code and manual setup.
+- Comes with embedded servers like Tomcat, Jetty, and Undertow.
+- Provides production-ready features such as health checks, metrics, and monitoring.
+- Simplifies dependency management using Spring Boot Starters.
+
+## 3. How does Spring Boot differ from the traditional Spring Framework?
+
+| Feature       | Spring Framework         | Spring Boot                 |
+| ------------- | ------------------------ | --------------------------- |
+| Configuration | Manual XML or Java-based | Auto-configured             |
+| Web Server    | Requires manual setup    | Embedded by default         |
+| Dependencies  | Manually managed         | Uses Spring Boot Starters   |
+| Microservices | Not optimized            | Optimized for microservices |
+
+## 4. What is the purpose of the `@SpringBootApplication` annotation?
+
+It is a convenience annotation that combines:
+
+- `@Configuration` for Java-based configuration.
+- `@EnableAutoConfiguration` for automatic configuration.
+- `@ComponentScan` for scanning components in the package.
+
+## 5. What are Spring Boot starters?
+
+Spring Boot starters are pre-configured dependency packages that help set up projects quickly. Examples include `spring-boot-starter-web` for REST APIs, `spring-boot-starter-data-jpa` for database access, and `spring-boot-starter-security` for Spring Security integration.
+
+## 6. What is Spring Boot auto-configuration?
+
+Spring Boot automatically configures beans based on the dependencies present in the classpath, reducing the need for manual configuration.
+
+## 7. How do you disable a specific auto-configuration in Spring Boot?
+
+Auto-configuration can be disabled using the `@EnableAutoConfiguration` annotation with the `exclude` parameter or by setting properties in `application.properties`.
+
+## 8. What is the purpose of `application.properties` or `application.yml`?
+
+These files are used for configuring application settings such as server port, database configurations, logging levels, and other application behaviors.
+
+## 9. What embedded servers does Spring Boot support?
+
+Spring Boot supports embedded servers such as Tomcat, Jetty, and Undertow.
+
+## 10. How do you change the default port of a Spring Boot application?
+
+The default port can be changed by modifying the `server.port` property in `application.properties` or by passing a command-line argument when starting the application.
+
+## 11. What is Spring Boot Actuator?
+
+Spring Boot Actuator provides production-ready features such as health checks, metrics, and environment properties. It is enabled by exposing specific endpoints in the configuration.
+
+## 12. What is the difference between `@RestController` and `@Controller`?
+
+- `@RestController` is a combination of `@Controller` and `@ResponseBody`, which returns JSON responses by default.
+- `@Controller` is used for handling web requests and returning views in a traditional MVC setup.
+
+## 13. How do you handle exceptions in Spring Boot?
+
+Spring Boot allows exception handling using `@ControllerAdvice` and `@ExceptionHandler` to catch and return custom responses for errors.
+
+## 14. What is Spring Boot DevTools?
+
+Spring Boot DevTools provides features for improving developer experience, such as automatic restart, live reload, and disabling caching during development.
+
+## 15. How do you secure a Spring Boot application?
+
+Spring Boot Security can be integrated by adding dependencies and configuring authentication and authorization settings.
+
+## 16. How do you connect Spring Boot to a database?
+
+Spring Boot connects to databases using JDBC, JPA, or Spring Data, configured through `application.properties` with database credentials and settings.
+
+## 17. What is the difference between `@Component`, `@Service`, and `@Repository`?
+
+- `@Component` is a generic annotation for Spring-managed beans.
+- `@Service` is used for business logic services.
+- `@Repository` is used for data access and provides exception translation.
+
+## 18. What is the difference between `@RequestMapping` and `@GetMapping`?
+
+- `@RequestMapping` can map multiple HTTP methods.
+- `@GetMapping` is specifically for handling GET requests.
+
+## 19. How do you enable CORS in Spring Boot?
+
+CORS can be enabled using `@CrossOrigin` on controllers or by configuring it globally using `WebMvcConfigurer`.
+
+## 20. How do you test a Spring Boot application?
+
+Spring Boot supports testing using JUnit for unit tests, `@SpringBootTest` for integration tests, and MockMvc for testing web controllers.
